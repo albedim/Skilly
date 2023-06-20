@@ -1,0 +1,1 @@
+[{"name": "Ent", "query": "CREATE TABLE Ent (id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(40) NOT NULL,surname VARCHAR(40) NOT NULL,age INT NOT NULL)"}]

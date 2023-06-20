@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarksViewState">
+    <option name="groupLineBookmarks" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5982a58-8150-4ce1-badf-bbd429c2b83a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Example/example/src/main/java/me/albedim/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/.idea/EasyEat.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/.idea/server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/configuration/Config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/configuration/Read-To-Use-REST_SERVICE.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/controller/CartController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/controller/OrderController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/controller/ProductController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/controller/UserController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/entity/Cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/entity/Order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/entity/Product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/entity/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/repository/CartRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/repository/OrderRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/repository/ProductRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/model/repository/UserRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/service/CartService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/service/OrderService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/service/ProductService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/service/UserService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/easyeat/utils/Util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/resources/config.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/resources/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/resources/rest_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/.idea/server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/configuration/Config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/configuration/Read-To-Use-REST_SERVICE.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/entity/Cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/entity/Order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/entity/Product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/entity/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/repository/CartRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/repository/OrderRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/repository/ProductRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/model/repository/UserRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/service/CartService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/service/OrderService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/service/ProductService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/server1/src/me/albedim/easyeat/service/UserService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/.idea/server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/model/Cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/model/Order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/model/Product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyEat/serverOld/model/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/controller/PollController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/controller/PollController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/entity/Poll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/entity/Poll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/repository/PollRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/repository/PollRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/model/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/service/PollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/service/PollService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/java/me/albedim/fryeat/utils/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fryeat/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Fryeat/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/MyPoolingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/MyPoolingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/controller/TravelController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/model/entity/Travel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/model/repository/TravelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/model/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/model/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/TravelService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/resources/rest_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/resources/rest_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/configuration/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/configuration/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/controller/SubscriptionController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/controller/SubscriptionController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/controller/UserController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/controller/UserController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/controller/docs/subscription/add.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/controller/docs/subscription/add.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/controller/docs/swagger.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/controller/docs/swagger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/model/entity/Subscription.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/model/entity/Subscription.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/model/repository/SubscriptionRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/model/repository/SubscriptionRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/model/repository/UserRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/model/repository/UserRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/service/SubscriptionService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/service/UserService.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/service/UserService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Subjer/subjer/utils/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/subjer/utils/Constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/controller/ContributionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/controller/ContributionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TaskManager/src/main/java/me/albedim/taskmanager/utils/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/WhoAreYou.com.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/resources/config.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/resources/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/resources/rest-service.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/assets/userImages/albertodimaio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/assets/userImages/kettysarnataro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/assets/userImages/matteosalvi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/configuration/Config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/controller/AdminController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/controller/UserController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/model/entity/Admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/model/entity/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/model/repository/AdminRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/model/repository/UserRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/service/AdminService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/service/UserService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WhoAreYou.com/whoareyou/utils/Util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/.idea/WhoAreYou.com.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/resources/config.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/resources/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/resources/rest-service.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/start.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/assets/userImages/albertodimaio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/assets/userImages/kettysarnataro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/assets/userImages/matteosalvi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/configuration/Config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/controller/AdminController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/controller/UserController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/model/entity/Admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/model/entity/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/model/repository/AdminRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/model/repository/UserRepository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/service/AdminService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/service/UserService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whoareyou-com/whoareyou/utils/Util.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RIVwzNhVnFOZgQATD3tQSE8iHs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Archivio/DevRoom/WebApps-Server/Skilly&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5982a58-8150-4ce1-badf-bbd429c2b83a" name="Changes" comment="" />
+      <created>1686937825353</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686937825353</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dsgdshsd/crud.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../prova.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
