@@ -95,6 +95,13 @@
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/skilly_decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/skilly_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/tables.json" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/tables.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" afterDir="false" />
@@ -172,7 +179,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -183,14 +190,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Archivio/DevRoom/WebApps-Server/Skilly&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Archivio/DevRoom/WebApps-Server/Skilly"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework" />
     </key>
@@ -211,7 +221,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -524,6 +540,31 @@
           <url>file://$PROJECT_DIR$/../../../prova.py</url>
           <line>31</line>
           <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <line>167</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <line>158</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <line>159</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

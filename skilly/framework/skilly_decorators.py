@@ -1,44 +1,47 @@
-import json
+from typing import Callable, Tuple, Any, Dict, List
 
-from skilly.framework.skilly_repository import createQuery
+from skilly.framework.skilly_sql_orm import createQuery
 
-
-def my_decorator(func):
-    def wrapper(*pargs, **kwargs):
-        print(pargs[0], kwargs)
-
-    return wrapper
-
-
-def Entity(func):
-    tables = json.load(open("tables.json"))
-    query = f"CREATE TABLE {func.__name__} ("
-    for param in func.__dict__:
-        if param != '__module__' and param != '__dict__' and param != '__weakref__' and param != '__doc__' and param != '__init__':
-            query += f"{param} {func.__dict__[param]}"
-    tables.append({
-        "name": func.__name__,
-        "query": query[:-1] + ")"
-    })
-    with open("tables.json", "w") as outline:
-        json.dump(tables, outline)
+'''
+# Returns the wrapper function, which returns an object coming from createQuery method
+    # Parameters:
+        func (func): function
+    # Returns:
+        object (any): Entity object
+'''
 
 
-def autoQBN(func):
+def autoQBN(func) -> \
+        Callable[[tuple[Any, ...], dict[str, Any]], Any]:
     def wrapper(*pargs, **kwargs):
         return createQuery(func, *pargs[1:])
+
     return wrapper
 
 
-def manualQBN(query):
-    def wrapper():
-        return query
+'''
+# Returns the wrapper function, which returns null
+    # Parameters:
+        func (func): function
+    # Returns:
+        -
+'''
+
+
+def entity(func) -> \
+        Callable[[tuple[Any, ...], dict[str, Any]], None]:
+    def wrapper(*pwargs, **kwargs):
+        o = pwargs[0]
+        counter = 0
+        if len(kwargs) > 0:
+            for param in o.__class__.__dict__:
+                if param != '__module__' and param != '__dict__' and param != '__weakref__' and param != '__doc__' and param != '__init__':
+                    setattr(o, param, kwargs['obj'][counter])
+                    counter += 1
+        else:
+            for param in o.__class__.__dict__:
+                if param != '__module__' and param != '__dict__' and param != '__weakref__' and param != '__doc__' and param != '__init__':
+                    setattr(o, param, pwargs[counter])
+                    counter += 1
+
     return wrapper
-
-
-class Skilly:
-
-    def __init__(self, *params):
-        for param in params:
-            Entity(param)
-

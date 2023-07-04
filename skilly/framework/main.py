@@ -1,45 +1,46 @@
-from skilly.framework.skilly_decorators import Entity, autoQBN, manualQBN
+from skilly.framework.skilly_decorators import entity, autoQBN
+from skilly.framework.skilly_init import entityInit
 from skilly.framework.skilly_repository import Repository
 from skilly.framework.skilly_sql_orm import Sql
+from skilly.framework.skilly_init import entityInit
 
 
-class Ent:
+class MyUser:
 
     id = Sql.int().id()
     name = Sql.string(40).notNull()
-    surname = Sql.string(40).notNull()
-    age = Sql.int().notNull()
+    email = Sql.string(40).notNull()
 
-    def __init__(self, name, surname, age):
-        self.name = name
-        self.surname = surname
-        self.age = age
+    @entity
+    def __init__(self, name, email, obj=()): ...
 
 
-class Rep(Repository):
+app = entityInit(MyUser)
+
+
+class MyUserRepo(Repository):
 
     @classmethod
     @autoQBN
-    def getByNameEqAndAgeLt(cls, name: str, age: int): ...
-
-e = Ent("a", "aa", 14)
-Rep.save(e)
-e.name = "afsfgasdgg"
-e.id = 3
-Rep.update(e)
-print(Rep.getByNameEqAndAgeLt("alberto", 14))
-
-"""
-
-class MethodCrud:
+    def getByNameEq(cls, name: str) -> MyUser: ...
 
     @classmethod
-    def getByName(cls):
-        return createQuery(cls.getByName, "alberto", "dimaio")
+    @autoQBN
+    def getOrderbyIdAsc(cls) -> list[MyUser]: ...
 
     @classmethod
-    def getByIdEqAndAgeGte(cls):
-        return createQuery(cls.getByIdEqAndAgeGte, "4", "18")
+    @autoQBN
+    def deleteByNameEqLimit1(cls, name: str) -> MyUser: ...
+
+#user = MyUser("albe", "dimaio")
+#MyUserRepo.save(user)
+
+users: list[MyUser] = MyUserRepo.getOrderbyIdAsc()
+print(users[0].id)
 
 
-"""
+
+
+
+
+
