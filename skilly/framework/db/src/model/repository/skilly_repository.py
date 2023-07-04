@@ -1,4 +1,4 @@
-from skilly.framework.connect import commit, get
+from skilly.framework.db.src.init.connect import commit, get
 
 
 class Repository:

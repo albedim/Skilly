@@ -1,6 +1,7 @@
-from typing import List, Any
+from typing import Any
 
-from skilly.framework.errors import NotFoundError
+from skilly.package import package
+from skilly.framework.utils.src.error.errors import NotFoundError
 
 
 '''
@@ -20,7 +21,7 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
     if isList:
         array = []
         for e in o:
-            module = importlib.import_module('skilly.framework.main')
+            module = importlib.import_module(package['project_name'] + '.model.repository.' + Class.lower() + "_repository")
             class_ = getattr(module, Class)
             array.append(class_(obj=e))
         return array
@@ -28,7 +29,7 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
         try:
             if o is None:
                 raise NotFoundError("This query did not return anything")
-            module = importlib.import_module('skilly.framework.main')
+            module = importlib.import_module(package['project_name'] + 'model.repository.' + Class.lower() + "_repository")
             class_ = getattr(module, Class)
             return class_(obj=o)
         except NotFoundError as e:

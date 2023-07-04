@@ -1,4 +1,4 @@
-from skilly.framework.connect import commit
+from skilly.framework.db.src.init.connect import commit
 
 
 def entityInit(*func):
@@ -7,5 +7,5 @@ def entityInit(*func):
         for param in entity.__dict__:
             if param != '__module__' and param != '__dict__' and param != '__weakref__' and param != '__doc__' and param != '__init__':
                 query += f"{param} {entity.__dict__[param]}"
-        print(query[:-1] + ")")
+        print("[skilly.entity] -> entity '"+entity.__name__+"' was created/checked")
         commit(query[:-1] + ")")

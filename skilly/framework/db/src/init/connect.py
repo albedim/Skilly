@@ -1,12 +1,23 @@
 import mysql.connector
 from mysql.connector.errors import *
 
+from skilly.package import package
+
+
+import importlib.util
+
+file_path = "./config.py"
+module_name = file_path.replace("/", ".")
+spec = importlib.util.spec_from_file_location(module_name, file_path)
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    database="prova",
-    password=""
+    host=module.database['host'],
+    user=module.database['user'],
+    database=module.database['db-name'],
+    password=module.database['password']
 )
 
 cursor = mydb.cursor(buffered=True)

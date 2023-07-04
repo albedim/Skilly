@@ -1,5 +1,5 @@
-from skilly.framework.connect import get, delete
-from skilly.framework.skilly_utils import toObj
+from skilly.framework.db.src.init.connect import get, delete
+from skilly.framework.utils.src.skilly_utils import toObj
 
 
 class Sql:
@@ -168,7 +168,6 @@ def createQuery(f, *params) -> None:
             return toObj(entityName, isList, delete(finalQuery, fetchAll=isList))
         return toObj(entityName, isList, get(finalQuery, fetchAll=isList))
     except IndexError:
-        print(finalQuery)
         if isDelete:
             return toObj(entityName, isList, delete(finalQuery, fetchAll=isList))
         return toObj(entityName, isList, get(finalQuery, fetchAll=isList))

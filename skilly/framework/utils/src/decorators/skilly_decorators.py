@@ -1,6 +1,6 @@
-from typing import Callable, Tuple, Any, Dict, List
+from typing import Callable, Any
 
-from skilly.framework.skilly_sql_orm import createQuery
+from skilly.framework.db.src.model.orm.skilly_sql_orm import createQuery
 
 '''
 # Returns the wrapper function, which returns an object coming from createQuery method

@@ -96,12 +96,14 @@
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/init/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/utils/src/error/errors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skilly/framework/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/skilly_decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/skilly_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/tables.json" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/tables.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/utils/src/decorators/skilly_decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/init/skilly_init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/model/repository/skilly_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/skilly_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/utils/src/skilly_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" afterDir="false" />
@@ -194,16 +196,72 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Archivio/DevRoom/WebApps-Server/Skilly"
+    "last_opened_file_path": "D:/Archivio/DevRoom/WebApps-Server/Skilly/skilly"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly" />
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\project" />
       <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework" />
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework\utils\src\error" />
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework\utils\src" />
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework\utils\decorators" />
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework\utils" />
+      <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly\skilly\framework\db\src\init" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skilly" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/skilly/framework" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/skilly/framework/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="skilly_controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skilly" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/skilly/framework" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/skilly/framework/skilly_controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.skilly_controller" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -542,29 +600,99 @@
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <url>file://$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py</url>
           <line>167</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
-          <line>171</line>
+          <url>file://$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py</url>
+          <line>170</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <url>file://$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py</url>
           <line>158</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
+          <url>file://$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py</url>
           <line>159</line>
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/skilly/framework/skilly_sql_orm.py</url>
-          <line>131</line>
-          <option name="timeStamp" value="112" />
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/skilly/framework/skilly_controller.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="201" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
