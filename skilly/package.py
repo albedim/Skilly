@@ -1,3 +1,3 @@
 package = {
-    "project_name": "project"
+    "project_name": "_"
 }

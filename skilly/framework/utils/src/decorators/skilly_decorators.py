@@ -36,23 +36,44 @@ def entity(func) -> \
         counter = 0
         if len(kwargs) > 0:
             for param in o.__class__.__dict__:
-                if param != '__module__' and param != '__dict__' and param != '__weakref__' and param != '__doc__' and param != '__init__':
+                if param != '__module__' \
+                        and param != '__dict__' \
+                        and param != '__weakref__' \
+                        and param != '__doc__' \
+                        and param != '__init__':
                     setattr(o, param, kwargs['obj'][counter])
                     counter += 1
         else:
             for param in o.__class__.__dict__:
-                if param != '__module__' and param != '__dict__' and param != '__weakref__' and param != '__doc__' and param != '__init__':
+                if param != '__module__' \
+                        and param != '__dict__' \
+                        and param != '__weakref__' \
+                        and param != '__doc__' \
+                        and param != '__init__':
                     setattr(o, param, pwargs[counter])
                     counter += 1
 
     return wrapper
 
 
+'''
+# Returns the wrapper function, which returns what the base function returns
+    # Parameters:
+        schema_name (str): "CREATION"
+    # Returns:
+        func(schemaName, body)
+        Response(400)
+'''
+
+
 def schema(schema_name):
     def decorator(func):
         def wrapper(cls, body):
             if not isValid(body, schema_name):
-                return ResponseHandler(http=ResponseHandler.HTTP_BAD_REQUEST, response={}).send()
+                return ResponseHandler(
+                    http=ResponseHandler.HTTP_BAD_REQUEST,
+                    response={}
+                ).send()
             return func(cls, body)
         return wrapper
 

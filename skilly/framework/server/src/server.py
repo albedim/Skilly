@@ -3,11 +3,37 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 from skilly.framework.utils.src.controller.response_handler import ResponseHandler
 
+'''
+
+# Variable that keeps stored all the active endpoints of the server
+    # Parameters:
+        -
+    # Returns:
+        -
+'''
 
 routes = {}
 
+'''
+
+# Class to manage the http requests
+    # Parameters:
+        -
+    # Returns:
+        -
+'''
+
 
 class RequestHandler(BaseHTTPRequestHandler):
+
+    """
+
+    # Returns None, handle the get requests and manage the errors
+        # Parameters:
+            -
+        # Returns:
+            -
+    """
 
     def do_GET(self):
         finalRoute = routes.get(getSchema(self.path))
@@ -34,6 +60,16 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
+
+    """
+
+    # Returns None, handle the delete requests and manage the errors
+        # Parameters:
+            -
+        # Returns:
+            -
+    """
+
     def do_DELETE(self):
         finalRoute = routes.get(getSchema(self.path))
         if finalRoute is None:
@@ -58,6 +94,15 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-type", "text/plain")
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
+
+    """
+
+    # Returns None, handle the put requests and manage the errors
+        # Parameters:
+            -
+        # Returns:
+            -
+    """
 
     def do_PUT(self):
         finalRoute = routes.get(getSchema(self.path))
@@ -84,6 +129,16 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
+
+    """
+
+    # Returns None, handle the post requests and manage the errors
+        # Parameters:
+            -
+        # Returns:
+            -
+    """
+
     def do_POST(self):
         finalRoute = routes.get(getSchema(self.path))
         if finalRoute is None:
@@ -109,8 +164,28 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
+    """
+
+    # Returns an object full of query params or just a query param
+        # Parameters:
+            query: (str) -> "name"
+        # Returns:
+            object: (dict) -> { "name": "Ok", "age": "14" } |
+            value: (str) -> "Ok"
+    """
+
     def query(self, query=None):
         return parse_qs(urlparse(self.path).query) if query is None else parse_qs(urlparse(self.path).query)[query][0]
+
+    """
+
+    # Returns an object full of path variables or just a path variable
+        # Parameters:
+            pathName: (str) -> "name"
+        # Returns:
+            object: (dict) -> { "date": "24", "age": "14" } |
+            value: (str) -> "24"
+    """
 
     def variables(self, pathName=None):
         schema = getSchema(self.path)
@@ -122,16 +197,35 @@ class RequestHandler(BaseHTTPRequestHandler):
                 counter += 1
         return obj if pathName is None else obj[pathName]
 
+    """
+
+    # Returns an object full of query params or just a query param
+        # Parameters:
+            -
+        # Returns:
+            object: (dict) -> { "name": "Ok", "age": "14" }
+    """
+
     def body(self):
         return json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))).decode("utf-8"))
 
 
-# Start the server
 def run_server():
     server_address = ("localhost", 8000)
     httpd = HTTPServer(server_address, RequestHandler)
     print("Server running on port 8000...")
     httpd.serve_forever()
+
+
+"""
+
+# Returns the param which is at the position: number of the string
+# Example: get/2/4
+    # Parameters:
+        number: (int) -> 1
+    # Returns:
+        value: (str) -> 4
+"""
 
 
 def getNumber(number, request):
@@ -143,6 +237,16 @@ def getNumber(number, request):
             thisCounter += 1
 
 
+"""
+
+# Returns the schema of the given path
+    # Parameters:
+        path: (str) -> "get/4"
+    # Returns:
+        value: (str) -> "get/{userId}"
+"""
+
+
 def getSchema(path):
     workingPath = path.split("?")[0]
     finalRoute = workingPath
@@ -150,10 +254,10 @@ def getSchema(path):
     for route in routes:
         if len(route.split("/")) == len(workingPath.split("/")):
             for i in range(len(workingPath.split("/"))):
-                a = route.split("/")[i]
-                b = workingPath.split("/")[i]
-                if route.split("/")[i].startswith("{") and workingPath.split("/")[i].isnumeric() \
-                        or route.split("/")[i] != "" and route.split("/")[i] == workingPath.split("/")[i]:
+                if route.split("/")[i].startswith("{") \
+                        and workingPath.split("/")[i].isnumeric() \
+                        or route.split("/")[i] != "" \
+                        and route.split("/")[i] == workingPath.split("/")[i]:
                     if i == len(workingPath.split("/")) - 1:
                         done = True
                         finalRoute = route

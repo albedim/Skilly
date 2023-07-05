@@ -1,5 +1,17 @@
 import datetime
 
+'''
+
+# Class to manage the http responses
+    # Parameters:
+        http (dict): {"code": 100, "success": True}
+        response (dict): {}
+        
+    # Returns:
+        func(schemaName, body)
+        Response(400)
+'''
+
 
 class ResponseHandler:
 

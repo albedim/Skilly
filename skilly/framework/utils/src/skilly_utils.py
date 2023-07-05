@@ -3,7 +3,6 @@ from typing import Any
 from skilly.package import package
 from skilly.framework.utils.src.error.errors import NotFoundError
 
-
 '''
 # Returns an object or list of objects or null
     # Parameters:
@@ -21,7 +20,8 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
     if isList:
         array = []
         for e in o:
-            module = importlib.import_module(package['project_name'] + '.model.repository.' + Class.lower() + "_repository")
+            module = importlib.import_module(
+                package['project_name'].lower() + '.model.repository.' + Class.lower() + "_repository")
             class_ = getattr(module, Class)
             array.append(class_(obj=e))
         return array
@@ -29,11 +29,22 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
         try:
             if o is None:
                 raise NotFoundError("This query did not return anything")
-            module = importlib.import_module(package['project_name'] + '.model.repository.' + Class.lower() + "_repository")
+            module = importlib.import_module(
+                package['project_name'].lower() + '.model.repository.' + Class.lower() + "_repository")
             class_ = getattr(module, Class)
             return class_(obj=o)
         except NotFoundError as e:
             return None
+
+
+'''
+# Returns true / false depending on the given schema. Which needs to respect the registered schema
+    # Parameters:
+        given_schema (dict): { "name": "Ok" }
+        schemaName (str): "CREATION"
+    # Returns:
+        boolean
+'''
 
 
 def isValid(givenSchema, schemaName):
@@ -49,4 +60,3 @@ def isValid(givenSchema, schemaName):
                 if key not in givenSchema or type(givenSchema[key]) != schema['schema'][key]:
                     return False
     return True
-
