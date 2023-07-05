@@ -1,21 +1,31 @@
 from urllib.parse import urlparse, parse_qs
 
-from skilly.framework.skilly_controller import run_server, routee, args, pathVars
+from project.service.service import MyUserService
+from skilly.framework.server.src.decorators import route
 
 
 # Define route handler functions
-@routee("/{userId}/{aa}/{bb}", "GET")
+@route("/get", "GET")
 def home(request):
-    return {"code": 200, "data": {"query": args(request), "path_var": pathVars(request)}}
+    return MyUserService.getAllUsers()
 
 
-@routee("/greet/{aa}", "GET")
-def greet(request):
-    return {"code": 200, "data": {"okk": parse_qs(urlparse(request.path).query)}}
+@route("/removeAll", "DELETE")
+def home(request):
+    return MyUserService.removeAll()
 
 
-@routee("/params", "GET")
-def params(request):
-    return {"code": 200, "data": {"ok": parse_qs(urlparse(request.path).query)}}
+@route("/update/{userId}", "PUT")
+def home(request):
+    return MyUserService.update(request.variables("userId"), request.query("name"))
 
-run_server()
+
+@route("/add", "POST")
+def home(request):
+    return MyUserService.add(request.body())
+
+
+@route("/get/{userId}", "GET")
+def getUser(request):
+    return MyUserService.getUserById(request.variables("userId"))
+

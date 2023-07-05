@@ -7,7 +7,15 @@ class MyUserRepository(Repository):
 
     @classmethod
     @autoQBN
-    def getByNameEq(cls, name: str) -> MyUser: ...
+    def get(cls) -> list[MyUser]: ...
+
+    @classmethod
+    @autoQBN
+    def delete(cls) -> list[MyUser]: ...
+
+    @classmethod
+    @autoQBN
+    def getByIdEq(cls, userId: str) -> MyUser: ...
 
     @classmethod
     @autoQBN

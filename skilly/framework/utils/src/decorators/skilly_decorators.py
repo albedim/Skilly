@@ -1,6 +1,7 @@
 from typing import Callable, Any
-
 from skilly.framework.db.src.model.orm.skilly_sql_orm import createQuery
+from skilly.framework.utils.src.controller.response_handler import ResponseHandler
+from skilly.framework.utils.src.skilly_utils import isValid
 
 '''
 # Returns the wrapper function, which returns an object coming from createQuery method
@@ -45,3 +46,14 @@ def entity(func) -> \
                     counter += 1
 
     return wrapper
+
+
+def schema(schema_name):
+    def decorator(func):
+        def wrapper(cls, body):
+            if not isValid(body, schema_name):
+                return ResponseHandler(http=ResponseHandler.HTTP_BAD_REQUEST, response={}).send()
+            return func(cls, body)
+        return wrapper
+
+    return decorator

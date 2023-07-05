@@ -150,6 +150,7 @@ def createQuery(f, *params) -> None:
                         # if it finds this word in the dictionary, it will be replaced with sql
                         if key == thisF:
                             finalQuery += DICTIONARY[key]["value"].replace("{table}", entityName)
+                            print(finalQuery)
                             # if it's an operand, it means that there will be a value after it
                             # so it will be added one of the params
                             if DICTIONARY[key]["operand"]:

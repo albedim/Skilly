@@ -1,7 +1,10 @@
+from project.controller.myuser_controller import home
 from project.model.entity.myuser import MyUser
-from project.service.service import MyUserService
 from skilly.framework.db.src.init.skilly_init import entityInit
 
-routes = entityInit(MyUser)
+from project.controller.myuser_controller import *
+from skilly.framework.server.src.server import run_server
 
-print(MyUserService.getAllUsers())
+entityInit(MyUser)
+
+run_server()
