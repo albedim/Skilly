@@ -1,16 +1,17 @@
 import datetime
 import os
 import shutil
+import sys
 
 
 def create_project(project_name):
     os.mkdir("../" + project_name.capitalize())
-    os.mkdir("../" + project_name.capitalize() + "/" + project_name.lower())
-    os.mkdir("../" + project_name.capitalize() + "/" + project_name.lower() + "/controller")
-    os.mkdir("../" + project_name.capitalize() + "/" + project_name.lower() + "/service")
-    os.mkdir("../" + project_name.capitalize() + "/" + project_name.lower() + "/model")
-    os.mkdir("../" + project_name.capitalize() + "/" + project_name.lower() + "/model/entity")
-    os.mkdir("../" + project_name.capitalize() + "/" + project_name.lower() + "/model/repository")
+    os.mkdir("../" + project_name.capitalize() + "/src")
+    os.mkdir("../" + project_name.capitalize() + "/src/controller")
+    os.mkdir("../" + project_name.capitalize() + "/src/service")
+    os.mkdir("../" + project_name.capitalize() + "/src/model")
+    os.mkdir("../" + project_name.capitalize() + "/src/model/entity")
+    os.mkdir("../" + project_name.capitalize() + "/src/model/repository")
     os.mkdir("../" + project_name.capitalize() + "/skilly")
     src_path = r"./skilly//"
     dst_path = r"../"+project_name.capitalize()+"/skilly//"
@@ -21,25 +22,16 @@ def create_project(project_name):
             shutil.copytree(s, d)
         else:
             shutil.copy2(s, d)
-    file = open("../" + project_name.capitalize() + "/skilly/package.py", "w")
-    file.write("""package = {
-    'project_name': '"""+project_name+"""'
-}""")
-    file.close()
-    file = open("../" + project_name.capitalize() + "/" + project_name.lower() + "/config.py", "w")
+    file = open("../" + project_name.capitalize() + "/src/config.py", "w")
     file.write("""database = {
     "type": "mysql",
     "host": "",
     "user": "",
     "db-name": "",
     "password": ""
-}
-
-package = {
-    'project_name': '"""+project_name.lower()+"""'
 }""")
     file.close()
-    file = open("../" + project_name.capitalize() + "/" + project_name.lower() + "/app.py", "w")
+    file = open("../" + project_name.capitalize() + "/src/app.py", "w")
     file.write("""from skilly.framework.db.src.init.skilly_init import entityInit
 from skilly.framework.server.src.server import run_server
 
@@ -53,7 +45,7 @@ if __name__ == '__main__':
 
 """)
     file.close()
-    file = open("../" + project_name.capitalize() + "/" + project_name.lower() + "/schema.py", "w")
+    file = open("../" + project_name.capitalize() + "/src/schema.py", "w")
     file.write("""SCHEMA = [
     {
         "name": "EXAMPLE_SCHEMA_POST_REQ",
@@ -63,12 +55,20 @@ if __name__ == '__main__':
         }
     }
 ]""")
-    file = open("../"+project_name.capitalize()+"/"+project_name.lower()+"/init.py", "w")
+    file = open("../"+project_name.capitalize()+"/requirements.txt", "w")
+    file.write("""install==1.3.5
+mysql-client==0.0.1
+mysql-connector-python==8.0.33
+protobuf==3.20.3
+PyJWT==2.7.0
+""")
+    file.close()
+    file = open("../"+project_name.capitalize()+"/src/init.py", "w")
     file.write("""import datetime
-from config import package
+
 
 def create_entity(entity_name):
-    file = open(package['project_name']+"/model/entity/"+entity_name.lower()+"_entity.py", "w")
+    file = open("./model/entity/"+entity_name.lower()+"_entity.py", "w")
     file.write(\"\"\"from skilly.framework.db.src.model.entity.skilly_entity import Entity
 from skilly.framework.utils.src.decorators.skilly_decorators import entity
 from skilly.framework.db.src.model.orm.skilly_sql_orm import Sql
@@ -84,8 +84,8 @@ class \"\"\"+entity_name.lower().capitalize()+\"\"\"(Entity):
 
 
 def create_repository(entity_name):
-    file = open(package['project_name']+"/model/repository/"+entity_name.lower()+"_repository.py", "w")
-    file.write(\"\"\"from \"\"\"+package['project_name']+\"\"\".model.entity.\"\"\"+entity_name.lower()+\"\"\"_entity import \"\"\"+entity_name.lower().capitalize()+\"\"\"
+    file = open("./model/repository/"+entity_name.lower()+"_repository.py", "w")
+    file.write(\"\"\"from src.model.entity.\"\"\"+entity_name.lower()+\"\"\"_entity import \"\"\"+entity_name.lower().capitalize()+\"\"\"
 from skilly.framework.utils.src.decorators.skilly_decorators import autoQBN
 from skilly.framework.db.src.model.repository.skilly_repository import Repository
 
@@ -103,10 +103,10 @@ class \"\"\"+entity_name.lower().capitalize()+\"\"\"Repository(Repository):
 
 
 def create_service(entity_name):
-    file = open(package['project_name']+"/service/"+entity_name.lower()+"_service.py", "w")
+    file = open("./service/"+entity_name.lower()+"_service.py", "w")
     file.write(\"\"\"import json
-from \"\"\"+package['project_name']+\"\"\".model.entity.\"\"\"+entity_name.lower()+\"\"\"_entity import \"\"\"+entity_name.lower().capitalize()+\"\"\"
-from \"\"\"+package['project_name']+\"\"\".model.repository.\"\"\"+entity_name.lower()+\"\"\"_repository import \"\"\"+entity_name.capitalize()+\"\"\"Repository
+from src.model.entity.\"\"\"+entity_name.lower()+\"\"\"_entity import \"\"\"+entity_name.lower().capitalize()+\"\"\"
+from src.model.repository.\"\"\"+entity_name.lower()+\"\"\"_repository import \"\"\"+entity_name.capitalize()+\"\"\"Repository
 from skilly.framework.utils.src.controller.response_handler import ResponseHandler
 from skilly.framework.utils.src.decorators.skilly_decorators import schema
 
@@ -129,25 +129,27 @@ class \"\"\"+entity_name.lower().capitalize()+\"\"\"Service:
 
     # ... you continue!
 
-)
+\"\"\")
     file.close()
     print(f"Service '{entity_name}' created")
 
 
 def create_controller(entity_name):
-    file = open(package['project_name']+"/controller/"+entity_name.lower()+"_controller.py", 'w')
-    file.write(\"\"\"from \"\"\"+package['project_name']+\"\"\".service.\"\"\"+entity_name.lower()+\"\"\"_service import \"\"\"+entity_name.lower().capitalize()+\"\"\"Service
+    file = open("./controller/"+entity_name.lower()+"_controller.py", 'w')
+    file.write(\"\"\"from skilly.framework.utils.src.controller.router_handler import RouteHandler
+from src.service.\"\"\" + entity_name.lower() + \"\"\"_service import \"\"\" + entity_name.lower().capitalize() + \"\"\"Service
 from skilly.framework.server.src.decorators import route
 
+router = RouteHandler('\"\"\" + entity_name.lower() + \"\"\"')
 
-@route("/get/{\"\"\"+entity_name.lower()+\"\"\"_id}", "GET")
-def get\"\"\"+entity_name.lower().capitalize()+\"\"\"(request):
-    \"\"\"+entity_name.lower()+\"\"\"Id = request.variables('\"\"\"+entity_name.lower()+\"\"\"_id')
-    result = \"\"\"+entity_name.lower().capitalize()+\"\"\"Service.get\"\"\"+entity_name.lower().capitalize()+\"\"\"(\"\"\"+entity_name.lower()+\"\"\"Id)
+
+@route(router.new("/get/{\"\"\" + entity_name.lower() + \"\"\"_id}"), "GET")
+def get\"\"\" + entity_name.lower().capitalize() + \"\"\"(request):
+    \"\"\" + entity_name.lower() + \"\"\"Id = request.variables('\"\"\" + entity_name.lower() + \"\"\"_id')
+    result = \"\"\" + entity_name.lower().capitalize() + \"\"\"Service.get\"\"\" + entity_name.lower().capitalize() + \"\"\"(\"\"\" + entity_name.lower() + \"\"\"Id)
     return result
 
 \"\"\")
-    file.close()
     print(f"Controller '{entity_name}' created")
 
 
@@ -177,21 +179,17 @@ def main():
 
 if __name__ == "__main__":
     main()""")
-    file.close()
     print(f"Project '{project_name}' created")
 
 
 def main():
-    print(" - create-project <projectName>\n")
 
-    while True:
-
-        command = input("["+datetime.datetime.timestamp(datetime.datetime.now()).__str__().split(".")[0]+"]")
-
-        if command.split(" ")[0] == "create-project":
-            create_project(command.split(" ")[1])
-        else:
-            print("Invalid command. Please try again.")
+    if len(sys.argv) == 1:
+        print("The correct use of this command is:\npython create_project.py <project_name>")
+        return
+    command = sys.argv[1]
+    print("Loading...")
+    create_project(command)
 
 
 if __name__ == "__main__":

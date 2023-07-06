@@ -1,6 +1,7 @@
 import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
+
 from skilly.framework.utils.src.controller.response_handler import ResponseHandler
 
 '''
@@ -25,7 +26,6 @@ routes = {}
 
 
 class RequestHandler(BaseHTTPRequestHandler):
-
     """
 
     # Returns None, handle the get requests and manage the errors
@@ -56,10 +56,9 @@ class RequestHandler(BaseHTTPRequestHandler):
 
         response = handler(self)
         self.send_response(response['status_code'])
-        self.send_header("Content-type", "text/plain")
+        self.send_header("Content-type", "application/json")
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
-
 
     """
 
@@ -129,7 +128,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
-
     """
 
     # Returns None, handle the post requests and manage the errors
@@ -179,6 +177,18 @@ class RequestHandler(BaseHTTPRequestHandler):
 
     """
 
+    # Returns a string representing the jwt token
+        # Parameters:
+            -
+        # Returns:
+            value: (str) -> "ey....."
+    """
+
+    def token(self):
+        return self.headers.get('Authorization').split(' ')[1]
+
+    """
+
     # Returns an object full of path variables or just a path variable
         # Parameters:
             pathName: (str) -> "name"
@@ -210,10 +220,10 @@ class RequestHandler(BaseHTTPRequestHandler):
         return json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))).decode("utf-8"))
 
 
-def run_server():
-    server_address = ("localhost", 8000)
+def run_server(ip="localhost", port=8080):
+    server_address = (ip, port)
     httpd = HTTPServer(server_address, RequestHandler)
-    print("Server running on port 8000...")
+    print("[skilly.server] -> Skilly server running on http://" + ip + ":" + str(port))
     httpd.serve_forever()
 
 

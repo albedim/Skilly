@@ -1,8 +1,6 @@
 import mysql.connector
 from mysql.connector.errors import *
 
-from skilly.package import package
-
 
 import importlib.util
 
@@ -25,9 +23,11 @@ cursor = mydb.cursor(buffered=True)
 
 def commit(query):
     try:
-        cursor.execute(query)
+        print("[skilly.sql.query] -> "+query)
+        c = cursor.execute(query)
         mydb.commit()
         mydb.reset_session()
+        return c
     except InterfaceError:
         print("Unable to connect to {}")
         return None
@@ -37,6 +37,7 @@ def commit(query):
 
 def get(query, fetchAll):
     try:
+        print("[skilly.sql.query] -> "+query)
         cursor.execute(query)
         r = cursor.fetchall() if fetchAll else cursor.fetchone()
         return r
@@ -47,8 +48,12 @@ def get(query, fetchAll):
         mydb.rollback()
 
 
+print(get("SELECT * FROM prov", True))
+
+
 def delete(query, fetchAll):
     try:
+        print("[skilly.sql.query] -> "+query)
         r = get(query.replace("DELETE", f"SELECT *"), fetchAll)
         cursor.execute(query)
         mydb.commit()
