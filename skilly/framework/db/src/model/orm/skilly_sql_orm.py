@@ -1,4 +1,4 @@
-from skilly.framework.db.src.init.connect import get, delete
+from skilly.framework.db.src.init.skilly_connect import get, delete
 from skilly.framework.utils.src.skilly_utils import toObj
 
 

@@ -2,7 +2,7 @@ import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 
-from skilly.framework.utils.src.controller.response_handler import ResponseHandler
+from skilly.framework.utils.src.controller.skilly_response_handler import ResponseHandler
 
 '''
 

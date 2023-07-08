@@ -1,4 +1,4 @@
-from skilly.framework.db.src.init.connect import commit
+from skilly.framework.db.src.init.skilly_connect import commit
 
 
 def entityInit(*func):

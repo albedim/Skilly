@@ -1,6 +1,6 @@
 from typing import Callable, Any
 from skilly.framework.db.src.model.orm.skilly_sql_orm import createQuery
-from skilly.framework.utils.src.controller.response_handler import ResponseHandler
+from skilly.framework.utils.src.controller.skilly_response_handler import ResponseHandler
 from skilly.framework.utils.src.skilly_utils import isValid
 
 '''

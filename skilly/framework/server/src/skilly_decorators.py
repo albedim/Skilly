@@ -3,8 +3,8 @@ from functools import wraps
 
 import jwt
 
-from skilly.framework.server.src.server import routes
-from skilly.framework.utils.src.controller.response_handler import ResponseHandler
+from skilly.framework.server.src.skilly_server import routes
+from skilly.framework.utils.src.controller.skilly_response_handler import ResponseHandler
 
 """
 

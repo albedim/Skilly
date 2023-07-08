@@ -55,7 +55,7 @@ if __name__ == '__main__':
         }
     }
 ]""")
-    file = open("../"+project_name.capitalize()+"/requirements.txt", "w")
+    file = open("../"+project_name.capitalize()+"/skilly_requirements.txt", "w")
     file.write("""install==1.3.5
 mysql-client==0.0.1
 mysql-connector-python==8.0.33

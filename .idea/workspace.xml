@@ -96,18 +96,6 @@
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/db/src/init/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/init/connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/db/src/model/entity/skilly_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/model/entity/skilly_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/db/src/model/repository/skilly_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/model/repository/skilly_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/prova.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/server/src/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/server/src/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/server/src/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/server/src/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/tables.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/utils/src/error/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/utils/src/error/errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/framework/utils/src/skilly_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/utils/src/skilly_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skilly/package.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" afterDir="false" />
