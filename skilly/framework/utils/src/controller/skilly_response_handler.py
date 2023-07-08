@@ -14,78 +14,113 @@ import datetime
 
 
 class ResponseHandler:
-
-    HTTP_CONTINUE = {"code": 100, "success": True}
-    HTTP_SWITCHING_PROTOCOLS = {"code": 101, "success": True}
-    HTTP_OK = {"code": 200, "success": True}
-    HTTP_CREATED = {"code": 201, "success": True}
-    HTTP_ACCEPTED = {"code": 202, "success": True}
-    HTTP_NON_AUTHORITATIVE_INFORMATION = {"code": 203, "success": True}
-    HTTP_NO_CONTENT = {"code": 204, "success": True}
-    HTTP_RESET_CONTENT = {"code": 205, "success": True}
-    HTTP_PARTIAL_CONTENT = {"code": 206, "success": True}
-    HTTP_MULTI_STATUS = {"code": 207, "success": True}
-    HTTP_MULTIPLE_CHOICES = {"code": 300, "success": False}
-    HTTP_MOVED_PERMANENTLY = {"code": 301, "success": False}
-    HTTP_FOUND = {"code": 302, "success": False}
-    HTTP_SEE_OTHER = {"code": 303, "success": False}
-    HTTP_NOT_MODIFIED = {"code": 304, "success": True}
-    HTTP_USE_PROXY = {"code": 305, "success": False}
-    HTTP_TEMPORARY_REDIRECT = {"code": 307, "success": False}
-    HTTP_PERMANENT_REDIRECT = {"code": 308, "success": False}
-    HTTP_BAD_REQUEST = {"code": 400, "success": False}
-    HTTP_UNAUTHORIZED = {"code": 401, "success": False}
-    HTTP_PAYMENT_REQUIRED = {"code": 402, "success": False}
-    HTTP_FORBIDDEN = {"code": 403, "success": False}
-    HTTP_NOT_FOUND = {"code": 404, "success": False}
-    HTTP_METHOD_NOT_ALLOWED = {"code": 405, "success": False}
-    HTTP_NOT_ACCEPTABLE = {"code": 406, "success": False}
-    HTTP_PROXY_AUTHENTICATION_REQUIRED = {"code": 407, "success": False}
-    HTTP_REQUEST_TIMEOUT = {"code": 408, "success": False}
-    HTTP_CONFLICT = {"code": 409, "success": False}
-    HTTP_GONE = {"code": 410, "success": False}
-    HTTP_LENGTH_REQUIRED = {"code": 411, "success": False}
-    HTTP_PRECONDITION_FAILED = {"code": 412, "success": False}
-    HTTP_PAYLOAD_TOO_LARGE = {"code": 413, "success": False}
-    HTTP_URI_TOO_LONG = {"code": 414, "success": False}
-    HTTP_UNSUPPORTED_MEDIA_TYPE = {"code": 415, "success": False}
-    HTTP_RANGE_NOT_SATISFIABLE = {"code": 416, "success": False}
-    HTTP_EXPECTATION_FAILED = {"code": 417, "success": False}
-    HTTP_MISDIRECTED_REQUEST = {"code": 421, "success": False}
-    HTTP_UNPROCESSABLE_ENTITY = {"code": 422, "success": False}
-    HTTP_LOCKED = {"code": 423, "success": False}
-    HTTP_FAILED_DEPENDENCY = {"code": 424, "success": False}
-    HTTP_TOO_EARLY = {"code": 425, "success": False}
-    HTTP_UPGRADE_REQUIRED = {"code": 426, "success": False}
-    HTTP_PRECONDITION_REQUIRED = {"code": 428, "success": False}
-    HTTP_TOO_MANY_REQUESTS = {"code": 429, "success": False}
-    HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE = {"code": 431, "success": False}
-    HTTP_UNAVAILABLE_FOR_LEGAL_REASONS = {"code": 451, "success": False}
-    HTTP_INTERNAL_SERVER_ERROR = {"code": 500, "success": False}
+    HTTP_CONTINUE = lambda self, message=None: {**self.__o, "code": 100, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 100, "success": True}
+    SWITCHING_PROTOCOLS = lambda self, message=None: {**self.__o, "code": 101, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 101, "success": True}
+    OK = lambda self, message=None: {**self.__o, "code": 200, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 200, "success": True}
+    CREATED = lambda self, message=None: {**self.__o, "code": 201, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 201, "success": True}
+    ACCEPTED = lambda self, message=None: {**self.__o, "code": 202, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 202, "success": True}
+    NON_AUTHORITATIVE_INFORMATION = lambda self, message=None: {**self.__o, "code": 203, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 203, "success": True}
+    NO_CONTENT = lambda self, message=None: {**self.__o, "code": 204, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 204, "success": True}
+    RESET_CONTENT = lambda self, message=None: {**self.__o, "code": 205, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 205, "success": True}
+    PARTIAL_CONTENT = lambda self, message=None: {**self.__o, "code": 206, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 206, "success": True}
+    MULTI_STATUS = lambda self, message=None: {**self.__o, "code": 207, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 207, "success": True}
+    MULTIPLE_CHOICES = lambda self, message=None: {**self.__o, "code": 300, "success": False, "message": message}\
+        if message is not None else {**self.__o, "code": 300, "success": False}
+    MOVED_PERMANENTLY = lambda self, message=None: {**self.__o, "code": 301, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 301, "success": False}
+    FOUND = lambda self, message=None: {**self.__o, "code": 302, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 302, "success": False}
+    SEE_OTHER = lambda self, message=None: {**self.__o, "code": 303, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 303, "success": False}
+    NOT_MODIFIED = lambda self, message=None: {**self.__o, "code": 304, "success": True, "message": message} \
+        if message is not None else {**self.__o, "code": 304, "success": True}
+    USE_PROXY = lambda self, message=None: {**self.__o, "code": 305, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 305, "success": False}
+    TEMPORARY_REDIRECT = lambda self, message=None: {**self.__o, "code": 307, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 307, "success": False}
+    PERMANENT_REDIRECT = lambda self, message=None: {**self.__o, "code": 308, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 308, "success": False}
+    BAD_REQUEST = lambda self, message=None: {**self.__o, "code": 400, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 400, "success": False}
+    UNAUTHORIZED = lambda self, message=None: {**self.__o, "code": 401, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 401, "success": False}
+    PAYMENT_REQUIRED = lambda self, message=None: {**self.__o, "code": 402, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 402, "success": False}
+    FORBIDDEN = lambda self, message=None: {**self.__o, "code": 403, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 403, "success": False}
+    NOT_FOUND = lambda self, message=None: {**self.__o, "code": 404, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 404, "success": False}
+    METHOD_NOT_ALLOWED = lambda self, message=None: {**self.__o, "code": 405, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 405, "success": False}
+    NOT_ACCEPTABLE = lambda self, message=None: {**self.__o, "code": 406, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 406, "success": False}
+    PROXY_AUTHENTICATION_REQUIRED = lambda self, message=None: {**self.__o, "code": 407, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 407, "success": False}
+    REQUEST_TIMEOUT = lambda self, message=None: {**self.__o, "code": 408, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 408, "success": False}
+    CONFLICT = lambda self, message=None: {**self.__o, "code": 409, "success": False, "message": message}\
+        if message is not None else {**self.__o, "code": 409, "success": False}
+    GONE = lambda self, message=None: {**self.__o, "code": 410, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 410, "success": False}
+    LENGTH_REQUIRED = lambda self, message=None: {**self.__o, "code": 411, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 411, "success": False}
+    PRECONDITION_FAILED = lambda self, message=None: {**self.__o, "code": 412, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 412, "success": False}
+    PAYLOAD_TOO_LARGE = lambda self, message=None: {**self.__o, "code": 413, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 413, "success": False}
+    URI_TOO_LONG = lambda self, message=None: {**self.__o, "code": 414, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 414, "success": False}
+    UNSUPPORTED_MEDIA_TYPE = lambda self, message=None: {**self.__o, "code": 415, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 415, "success": False}
+    RANGE_NOT_SATISFIABLE = lambda self, message=None: {**self.__o, "code": 416, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 416, "success": False}
+    EXPECTATION_FAILED = lambda self, message=None: {**self.__o, "code": 417, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 417, "success": False}
+    MISDIRECTED_REQUEST = lambda self, message=None: {**self.__o, "code": 421, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 421, "success": False}
+    UNPROCESSABLE_ENTITY = lambda self, message=None: {**self.__o, "code": 422, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 422, "success": False}
+    LOCKED = lambda self, message=None: {**self.__o, "code": 423, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 423, "success": False}
+    FAILED_DEPENDENCY = lambda self, message=None: {**self.__o, "code": 424, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 424, "success": False}
+    TOO_EARLY = lambda self, message=None: {**self.__o, "code": 425, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 425, "success": False}
+    UPGRADE_REQUIRED = lambda self, message=None: {**self.__o, "code": 426, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 426, "success": False}
+    PRECONDITION_REQUIRED = lambda self, message=None: {**self.__o, "code": 428, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 428, "success": False}
+    TOO_MANY_REQUESTS = lambda self, message=None: {**self.__o, "code": 429, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 429, "success": False}
+    REQUEST_HEADER_FIELDS_TOO_LARGE = lambda self, message=None: {**self.__o, "code": 431, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 431, "success": False}
+    UNAVAILABLE_FOR_LEGAL_REASONS = lambda self, message=None: {**self.__o, "code": 451, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 451, "success": False}
+    INTERNAL_SERVER_ERROR = lambda self, message=None: {**self.__o, "code": 500, "success": False, "message": message} \
+        if message is not None else {**self.__o, "code": 500, "success": False}
 
     __o = {
-        "success": False,
-        "status_code": 0,
-        "response": "",
         "timestamp": ""
     }
 
-    def __init__(self, http=None, response=None, obj=None):
-        if obj is None:
-            self.__o['status_code'] = http['code']
-            self.__o['success'] = http['success']
-            self.__o['response'] = response
-            self.__o['timestamp'] = datetime.datetime.timestamp(datetime.datetime.now())
+    def __init__(self, obj=None):
+        if obj is not None:
+            self.__o['response'] = obj
         else:
-            self.__o = obj
+            if "response" in self.__o:
+                self.__o.__delitem__("response")
+        self.__o['timestamp'] = datetime.datetime.timestamp(datetime.datetime.now())
 
-    def setMessage(self, message):
-        if self.__o['success']:
-            self.__o['message'] = message
-        else:
-            self.__o['error'] = message
-        return ResponseHandler(obj=self.__o)
-
-    def send(self):
-        return self.__o
-
+    @classmethod
+    def send(cls, response=None):
+        return ResponseHandler(obj=response)

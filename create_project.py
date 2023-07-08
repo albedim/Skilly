@@ -33,7 +33,7 @@ def create_project(project_name):
     file.close()
     file = open("../" + project_name.capitalize() + "/src/app.py", "w")
     file.write("""from skilly.framework.db.src.init.skilly_init import entityInit
-from skilly.framework.server.src.server import run_server
+from skilly.framework.server.src.skilly_server import run_server
 
 # register all the entities
 # entityInit(User, Product)
@@ -107,7 +107,7 @@ def create_service(entity_name):
     file.write(\"\"\"import json
 from src.model.entity.\"\"\"+entity_name.lower()+\"\"\"_entity import \"\"\"+entity_name.lower().capitalize()+\"\"\"
 from src.model.repository.\"\"\"+entity_name.lower()+\"\"\"_repository import \"\"\"+entity_name.capitalize()+\"\"\"Repository
-from skilly.framework.utils.src.controller.response_handler import ResponseHandler
+from skilly.framework.utils.src.controller.skilly_response_handler import ResponseHandler
 from skilly.framework.utils.src.decorators.skilly_decorators import schema
 
 
@@ -136,9 +136,9 @@ class \"\"\"+entity_name.lower().capitalize()+\"\"\"Service:
 
 def create_controller(entity_name):
     file = open("./controller/"+entity_name.lower()+"_controller.py", 'w')
-    file.write(\"\"\"from skilly.framework.utils.src.controller.router_handler import RouteHandler
+    file.write(\"\"\"from skilly.framework.utils.src.controller.skilly_router_handler import RouteHandler
 from src.service.\"\"\" + entity_name.lower() + \"\"\"_service import \"\"\" + entity_name.lower().capitalize() + \"\"\"Service
-from skilly.framework.server.src.decorators import route
+from skilly.framework.server.src.skilly_decorators import route
 
 router = RouteHandler('\"\"\" + entity_name.lower() + \"\"\"')
 

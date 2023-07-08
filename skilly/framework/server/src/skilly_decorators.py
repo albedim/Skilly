@@ -49,9 +49,6 @@ def requireToken(func):
             except jwt.InvalidTokenError:
                 message = "Invalid token"
 
-        return ResponseHandler(
-                http=ResponseHandler.HTTP_UNAUTHORIZED,
-                response={}
-            ).setMessage(message).send()
+        return ResponseHandler.send().UNAUTHORIZED(message)
 
     return wrapper

@@ -94,8 +94,6 @@
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" afterDir="false" />
@@ -184,13 +182,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Archivio/DevRoom/WebApps-Server/Prova&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Archivio/DevRoom/WebApps-Server/Userauthetication"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Archivio\DevRoom\WebApps-Server\Skilly" />

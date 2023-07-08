@@ -40,22 +40,20 @@ class RequestHandler(BaseHTTPRequestHandler):
         if finalRoute is None:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_NOT_FOUND,
-                response={}).setMessage("This route doesn't exist.").send()).encode("utf-8"))
+            self.wfile.write(
+                json.dumps(ResponseHandler.send().NOT_FOUND("This route doesn't exist.")).encode("utf-8"))
             return
 
         method, handler = finalRoute
         if method != "GET":
             self.send_response(405)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_METHOD_NOT_ALLOWED,
-                response={}).setMessage("This method is not allowed").send()).encode("utf-8"))
+            self.wfile.write(
+                json.dumps(ResponseHandler.send().METHOD_NOT_ALLOWED("This method is not allowed.")).encode("utf-8"))
             return
 
         response = handler(self)
-        self.send_response(response['status_code'])
+        self.send_response(response['code'])
         self.send_header("Content-type", "application/json")
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
@@ -74,22 +72,18 @@ class RequestHandler(BaseHTTPRequestHandler):
         if finalRoute is None:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_NOT_FOUND,
-                response={}).setMessage("This route doesn't exist.").send()).encode("utf-8"))
+            self.wfile.write(json.dumps(ResponseHandler.send().NOT_FOUND("This route doesn't exist.")).encode("utf-8"))
             return
 
         method, handler = finalRoute
         if method != "DELETE":
             self.send_response(405)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_METHOD_NOT_ALLOWED,
-                response={}).setMessage("This method is not allowed").send()).encode("utf-8"))
+            self.wfile.write(json.dumps(ResponseHandler.send().METHOD_NOT_ALLOWED("This method is not allowed.")).encode("utf-8"))
             return
 
         response = handler(self)
-        self.send_response(response['status_code'])
+        self.send_response(response['code'])
         self.send_header("Content-type", "text/plain")
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
@@ -108,22 +102,18 @@ class RequestHandler(BaseHTTPRequestHandler):
         if finalRoute is None:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_NOT_FOUND,
-                response={}).setMessage("This route doesn't exist.").send()).encode("utf-8"))
+            self.wfile.write(json.dumps(ResponseHandler.send().NOT_FOUND("This route doesn't exist.")).encode("utf-8"))
             return
 
         method, handler = finalRoute
         if method != "PUT":
             self.send_response(405)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_METHOD_NOT_ALLOWED,
-                response={}).setMessage("This method is not allowed").send()).encode("utf-8"))
+            self.wfile.write(json.dumps(ResponseHandler.send().METHOD_NOT_ALLOWED("This method is not allowed.")).encode("utf-8"))
             return
 
         response = handler(self)
-        self.send_response(response['status_code'])
+        self.send_response(response['code'])
         self.send_header("Content-type", "text/plain")
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))
@@ -142,22 +132,18 @@ class RequestHandler(BaseHTTPRequestHandler):
         if finalRoute is None:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_NOT_FOUND,
-                response={}).setMessage("This route doesn't exist.").send()).encode("utf-8"))
+            self.wfile.write(json.dumps(ResponseHandler.send().NOT_FOUND("This route doesn't exist.")).encode("utf-8"))
             return
 
         method, handler = finalRoute
         if method != "POST":
             self.send_response(405)
             self.end_headers()
-            self.wfile.write(json.dumps(ResponseHandler(
-                http=ResponseHandler.HTTP_METHOD_NOT_ALLOWED,
-                response={}).setMessage("This method is not allowed").send()).encode("utf-8"))
+            self.wfile.write(json.dumps(ResponseHandler.send().METHOD_NOT_ALLOWED("This method is not allowed.")).encode("utf-8"))
             return
 
         response = handler(self)
-        self.send_response(response['status_code'])
+        self.send_response(response['code'])
         self.send_header("Content-type", "text/plain")
         self.end_headers()
         self.wfile.write(json.dumps(response).encode("utf-8"))

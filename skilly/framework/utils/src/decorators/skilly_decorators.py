@@ -70,10 +70,7 @@ def schema(schema_name):
     def decorator(func):
         def wrapper(cls, body):
             if not isValid(body, schema_name):
-                return ResponseHandler(
-                    http=ResponseHandler.HTTP_BAD_REQUEST,
-                    response={}
-                ).send()
+                return ResponseHandler.send().BAD_REQUEST()
             return func(cls, body)
         return wrapper
 

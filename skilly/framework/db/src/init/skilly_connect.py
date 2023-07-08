@@ -48,9 +48,6 @@ def get(query, fetchAll):
         mydb.rollback()
 
 
-print(get("SELECT * FROM prov", True))
-
-
 def delete(query, fetchAll):
     try:
         print("[skilly.sql.query] -> "+query)
