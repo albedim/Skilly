@@ -18,3 +18,10 @@ class InconvertibleEntityToJSON(Exception):
     def getMessage(cls):
         return "[skilly.error] -> This entity object can't be converted into JSON"
 
+
+class InvalidParamsAmount(Exception):
+
+    @classmethod
+    def getMessage(cls):
+        return "[skilly.error] -> You set an amount of attributes different from the result one"
+

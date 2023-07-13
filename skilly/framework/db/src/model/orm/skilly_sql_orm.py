@@ -94,8 +94,10 @@ class Sql:
             query (str): final query
     """
 
-    def id(self):
-        return self.o[:-1] + " AUTO_INCREMENT PRIMARY KEY,"
+    def id(self, primary_key=False):
+        if primary_key:
+            return self.o[:-1] + " AUTO_INCREMENT PRIMARY KEY,"
+        return self.o[:-1] + ","
 
     """
     # Returns an object of Sql with o += not null...

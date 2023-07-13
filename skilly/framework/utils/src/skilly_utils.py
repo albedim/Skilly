@@ -22,7 +22,7 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
         if isList:
             array = []
             for e in o:
-                module = importlib.import_module('src.model.repository.' + Class.lower() + "_repository")
+                module = importlib.import_module('src.model.entity.' + Class.lower() + "_entity")
                 class_ = getattr(module, Class)
                 array.append(class_(obj=e))
             return array
@@ -30,7 +30,7 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
             try:
                 if o is None:
                     raise NotFoundError()
-                module = importlib.import_module('src.model.repository.' + Class.lower() + "_repository")
+                module = importlib.import_module('src.model.entity.' + Class.lower() + "_entity")
                 class_ = getattr(module, Class)
                 return class_(obj=o)
             except NotFoundError as e:
@@ -40,6 +40,11 @@ def toObj(Class, isList, o) -> list[Any] | None | Any:
         print(e)
         return None
 
+
+class Attr:
+
+    def __init__(self, attribute):
+        self.attribute = attribute
 
 '''
 # Returns true / false depending on the given schema. Which needs to respect the registered schema

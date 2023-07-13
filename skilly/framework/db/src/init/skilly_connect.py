@@ -1,4 +1,8 @@
+from typing import Generator
+
 import mysql.connector
+from mysql.connector.cursor import MySQLCursor
+from mysql.connector.cursor_cext import CMySQLCursor
 from mysql.connector.errors import *
 
 
@@ -21,7 +25,7 @@ mydb = mysql.connector.connect(
 cursor = mydb.cursor(buffered=True)
 
 
-def commit(query):
+def commit(query) -> Generator[MySQLCursor, None, None] | None | Generator[CMySQLCursor, None, None]:
     try:
         print("[skilly.sql.query] -> "+query)
         c = cursor.execute(query)
