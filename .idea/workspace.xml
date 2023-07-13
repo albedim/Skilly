@@ -94,6 +94,10 @@
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/MyConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPooling/src/main/java/me/albedim/mypooling/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/skilly/framework/db/src/model/orm/skilly_sql_orm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/Subjer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Subjer/.idea/vcs.xml" afterDir="false" />
@@ -186,7 +190,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Archivio/DevRoom/WebApps-Server/Userauthetication"
+    "last_opened_file_path": "D:/Archivio/DevRoom/WebApps-Server/Skilly"
   }
 }]]></component>
   <component name="RecentsManager">

@@ -110,6 +110,9 @@ class Sql:
     def notNull(self):
         return self.o[:-1] + " NOT NULL,"
 
+    def allowNull(self):
+        return self.o
+
 
 """
 # Returns an object which is going to be returned by a function that 

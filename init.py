@@ -9,7 +9,7 @@ from skilly.framework.db.src.model.orm.skilly_sql_orm import Sql
 
 
 class """+entity_name.lower().capitalize()+"""(Entity):
-    """+entity_name.lower()+"""_id = Sql.int().id()
+    """+entity_name.lower()+"""_id = Sql.int().id(primary_key=True)
 
     @entity
     def __init__(self, obj=()): ...
