@@ -36,6 +36,22 @@ class """+entity_name.lower().capitalize()+"""Repository(Repository):
     print(f"Repository '{entity_name}' created")
 
 
+def create_custom_service(service_name):
+    file = open("./service/" + service_name.lower() + "_service.py", "w")
+    file.write("""import json
+from skilly.framework.utils.src.controller.skilly_response_handler import ResponseHandler
+from skilly.framework.utils.src.decorators.skilly_decorators import schema
+
+
+class """ + entity_name.lower().capitalize() + """Service:
+    
+    ...
+
+""")
+    file.close()
+    print(f"Service '{service_name}' created")
+
+
 def create_service(entity_name):
     file = open("./service/"+entity_name.lower()+"_service.py", "w")
     file.write("""import json
@@ -51,15 +67,9 @@ class """+entity_name.lower().capitalize()+"""Service:
     def get"""+entity_name.lower().capitalize()+"""(cls, """+entity_name.lower()+"""Id):
         """+entity_name.lower()+""": """+entity_name.lower().capitalize()+""" = """+entity_name.lower().capitalize()+"""Repository.getBy"""+entity_name.lower().capitalize()+"""_idEq("""+entity_name.lower()+"""Id)
         if """+entity_name.lower()+""" is None:
-            return ResponseHandler(
-                http=ResponseHandler.HTTP_NOT_FOUND,
-                response={}
-            ).setMessage("Not Found").send()
+            return ResponseHandler.send().NOT_FOUND("Not Found")
         else:
-            return ResponseHandler(
-                http=ResponseHandler.HTTP_CREATED,
-                response="""+entity_name.lower()+""".toJSON()
-            ).setMessage("Found").send()
+            return ResponseHandler.send("""+entity_name.lower()+""".toJSON()).OK()
         
     # ... you continue!
 
@@ -76,7 +86,7 @@ from skilly.framework.server.src.skilly_decorators import route
 
 router = RouteHandler('"""+entity_name.lower()+"""')
 
-@route(router.new("/get/{"""+entity_name.lower()+"""_id}"), "GET")
+@route(router.new("/get/{"""+entity_name.lower()+"""_id}"), RouteHandler.GET())
 def get"""+entity_name.lower().capitalize()+"""(request):
     """+entity_name.lower()+"""Id = request.variables('"""+entity_name.lower()+"""_id')
     result = """+entity_name.lower().capitalize()+"""Service.get"""+entity_name.lower().capitalize()+"""("""+entity_name.lower()+"""Id)
@@ -88,24 +98,25 @@ def get"""+entity_name.lower().capitalize()+"""(request):
 
 def main():
     print("Command Menu:")
-    print(" - Create an entity create-entity <entityName>")
-    print(" - Create a repository create-repository <entityName>")
-    print(" - Create a service create-service <entityName>")
-    print(" - Create a controller create-project <entityName>")
-    print(" - Exit")
+    print(" - Create a module: create-module <entityName>")
+    print("     It's going to create a set of files called module:")
+    print("      x1 Entity")
+    print("      x1 Repository")
+    print("      x1 Service")
+    print("      x1 Controller")
+    print(" - Create a custom service: create-service <serviceName>")
 
     while True:
 
         command = input("["+datetime.datetime.timestamp(datetime.datetime.now()).__str__().split(".")[0]+"]")
 
-        if command.split(" ")[0] == "create-entity":
+        if command.split(" ")[0] == "create-module":
             create_entity(command.split(" ")[1])
-        elif command.split(" ")[0] == "create-repository":
             create_repository(command.split(" ")[1])
-        elif command.split(" ")[0] == "create-service":
             create_service(command.split(" ")[1])
-        elif command.split(" ")[0] == "create-controller":
             create_controller(command.split(" ")[1])
+        elif command.split(" ")[0] == "create-service":
+            create_custom_service(command.split(" ")[1])
         else:
             print("Invalid command. Please try again.")
 
