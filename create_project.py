@@ -1,7 +1,9 @@
 import datetime
+import platform
 import os
 import shutil
 import sys
+import subprocess
 
 
 def create_project(project_name):
@@ -67,6 +69,10 @@ PyJWT==2.7.0
     init = open("./init.py", 'r')
     init = init.read()
     file.write(init)
+    file.close()
+    print("Creating virtual env...")
+    subprocess.run(["python", "-m", "venv", f"../{project_name.capitalize()}/env"], check=True)
+    print("Virtual environment 'env' created successfully.")
     print(f"Project '{project_name}' created")
 
 
